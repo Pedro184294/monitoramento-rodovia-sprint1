@@ -34,5 +34,7 @@ Executar a classe `Principal.java`.
 ## Autores
 
 Pedro Luis Tofoli    RM: 564441
-Vinicius Barbosa Gomes  RM:564854
+
+Vinicius Barbosa Gomes  RM: 564854
+
 Fabricio Cardoso de Oliveira  RM: 561827
