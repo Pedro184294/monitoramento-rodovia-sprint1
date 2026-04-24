@@ -4,6 +4,8 @@ public class Principal {
 
     public static void main(String[] args) {
 
+        System.out.println("===== RELATÓRIO =====");
+
         TrechoRodovia trecho1 = new TrechoRodovia(10, 15);
         TrechoRodovia trecho2 = new TrechoRodovia(20, 25);
 
@@ -16,18 +18,22 @@ public class Principal {
         trecho2.atribuirEquipe(equipe);
 
         System.out.println("Trecho 1: " + trecho1.getNivelVegetacao() + " cm");
-
         System.out.println("Trecho 2: " + trecho2.getNivelVegetacao() + " cm");
 
-        // MOSTRAR A EQUIPE ASSOCIADA
+        // Mostrar equipe associada
         if (trecho2.getEquipeResponsavel() != null) {
-            System.out.println("Equipe responsável pelo trecho 2: " 
-                + trecho2.getEquipeResponsavel().getNome());
+            System.out.println("Equipe responsável pelo trecho 2: "
+                    + trecho2.getEquipeResponsavel().getNome());
         }
 
-        // IDENTIFICAR TRECHO CRÍTICO
-        if (trecho2.getNivelVegetacao() > 20) {
+        // Separador visual
+        System.out.println("\n===== ALERTAS =====");
+
+        // Verificação usando método da classe (BOA PRÁTICA)
+        if (trecho2.precisaDeManutencao()) {
             System.out.println("⚠️ Trecho 2 está crítico e precisa de manutenção!");
+        } else {
+            System.out.println("Nenhum trecho crítico no momento.");
         }
     }
 }

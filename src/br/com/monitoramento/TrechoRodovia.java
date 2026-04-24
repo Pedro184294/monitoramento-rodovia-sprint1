@@ -40,4 +40,9 @@ public class TrechoRodovia {
     public EquipeManutencao getEquipeResponsavel() {
         return equipeResponsavel;
     }
+
+    // REGRA DE NEGÓCIO (IMPORTANTE)
+    public boolean precisaDeManutencao() {
+        return nivelVegetacao > 20;
+    }
 }
